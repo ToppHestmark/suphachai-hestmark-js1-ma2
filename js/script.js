@@ -21,7 +21,6 @@ const dropdown = document.querySelector('select');
 const paragraphsContainer = document.querySelector(".paragraphs-container");
 
 dropdown.onchange = function() {
-  console.log(this.value);
   const selectedValue = this.value;
 
   paragraphsContainer.innerHTML = "";
@@ -29,4 +28,16 @@ dropdown.onchange = function() {
   for (let i = 1; i <= selectedValue; i++) {
     paragraphsContainer.innerHTML += `<p class="content">Paragraph ${i}</p>`
   }
+}
+
+// Question 4
+const textArea = document.querySelector(".input");
+const charCount = document.querySelector(".char-count b")
+
+textArea.onkeyup = function() {
+  // console.log(event.target.value.length);
+
+  const length = event.target.value.length;
+
+  charCount.innerHTML = length;
 }
