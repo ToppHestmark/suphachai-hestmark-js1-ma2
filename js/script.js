@@ -7,3 +7,10 @@ changeBackgroundBtn.addEventListener('click', function() {
 });
 
 // Question 2
+const toggle = document.querySelector(".toggler");
+
+toggle.addEventListener('click', function() {
+  let toglee = document.querySelector(".toglee")
+  
+  
+});
