@@ -6,6 +6,7 @@ changeBackgroundBtn.addEventListener('click', function() {
   body.style.backgroundColor = "green";
 });
 
+
 // Question 2
 const toggle = document.querySelector(".toggler");
 
@@ -13,3 +14,11 @@ toggle.addEventListener('click', function() {
   let togglee = document.querySelector(".togglee")
   togglee.classList.toggle("extra")
 });
+
+
+// Question 3
+const dropdown = document.querySelector('select');
+
+dropdown.onchange = function() {
+  console.log(dropdown.value)
+}
