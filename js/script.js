@@ -41,3 +41,19 @@ textArea.onkeyup = function() {
 
   charCount.innerHTML = length;
 }
+
+// Question 5
+const body = document.querySelector("body");
+
+function handleScroll() {
+  // console.log(window.scrollY)
+
+  const scrolled = window.scrollY;
+  if (scrolled > 35) {
+    body.classList.add("highlight")
+  } else {
+    body.classList.remove("highlight")
+  }
+}
+
+window.onscroll = handleScroll;
