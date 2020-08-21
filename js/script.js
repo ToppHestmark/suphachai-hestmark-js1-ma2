@@ -33,17 +33,9 @@ dropdown.onchange = function() {
 const textArea = document.querySelector(".input");
 const charCount = document.querySelector(".char-count b")
 
-textArea.onkeyup = () => {
-  // console.log(event.target.value.length);
-  const length = event.target.value.length;
-  charCount.innerHTML = length;
-}
+textArea.onkeyup = () => { charCount.innerHTML = event.target.value.length; }
 
 // Question 5
 const body = document.querySelector("body");
 
-window.onscroll = () => {
-  // console.log(window.scrollY)
-  const scrolled = window.scrollY;
-  scrolled > 35 ? body.classList.add("highlight") : body.classList.remove("highlight");
-}
+window.onscroll = () => { window.scrollY > 35 ? body.classList.add("highlight") : body.classList.remove("highlight"); }
