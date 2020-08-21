@@ -21,10 +21,9 @@ const dropdown = document.querySelector('select');
 const paragraphsContainer = document.querySelector(".paragraphs-container");
 
 dropdown.onchange = function() {
-  const selectedValue = this.value;
   paragraphsContainer.innerHTML = "";
 
-  for (let i = 1; i <= selectedValue; i++) {
+  for (let i = 1; i <= this.value; i++) {
     paragraphsContainer.innerHTML += `<p class="content">Paragraph ${i}</p>`
   }
 }
