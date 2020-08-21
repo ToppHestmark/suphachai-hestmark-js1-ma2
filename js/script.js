@@ -1,8 +1,8 @@
 // Question 1
 const changeBackgroundBtn = document.querySelector("#bg");
 
-changeBackgroundBtn.addEventListener('click', function() {
-  let body = document.querySelector("body")
+changeBackgroundBtn.addEventListener('click', () => {
+  let body = document.querySelector("body");
   body.style.backgroundColor = "green";
 });
 
@@ -10,9 +10,9 @@ changeBackgroundBtn.addEventListener('click', function() {
 // Question 2
 const toggle = document.querySelector(".toggler");
 
-toggle.addEventListener('click', function() {
-  let togglee = document.querySelector(".togglee")
-  togglee.classList.toggle("extra")
+toggle.addEventListener('click', () => {
+  let togglee = document.querySelector(".togglee");
+  togglee.classList.toggle("extra");
 });
 
 
@@ -22,7 +22,6 @@ const paragraphsContainer = document.querySelector(".paragraphs-container");
 
 dropdown.onchange = function() {
   const selectedValue = this.value;
-
   paragraphsContainer.innerHTML = "";
 
   for (let i = 1; i <= selectedValue; i++) {
@@ -34,21 +33,17 @@ dropdown.onchange = function() {
 const textArea = document.querySelector(".input");
 const charCount = document.querySelector(".char-count b")
 
-textArea.onkeyup = function() {
+textArea.onkeyup = () => {
   // console.log(event.target.value.length);
-
   const length = event.target.value.length;
-
   charCount.innerHTML = length;
 }
 
 // Question 5
 const body = document.querySelector("body");
 
-function handleScroll() {
+window.onscroll = () => {
   // console.log(window.scrollY)
   const scrolled = window.scrollY;
   scrolled > 35 ? body.classList.add("highlight") : body.classList.remove("highlight");
 }
-
-window.onscroll = handleScroll;
